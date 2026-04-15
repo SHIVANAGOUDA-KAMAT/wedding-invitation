@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://shivanagouda-kamat.github.io/wedding-invitation/">
 <meta property="og:title" content="Shivanagouda & Akshata — Wedding Invitation">
 <meta property="og:description" content="You are cordially invited to the wedding of Shivanagouda & Akshata — 28-30 April 2026, Bailhongal, Karnataka. Join us for a memorable celebration with traditional ceremonies and reception.">
-<meta property="og:image" content="assets/placeholder.jpeg">
+<meta property="og:image" content="assets/wedding-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Shivanagouda & Akshata Wedding">
@@ -170,6 +170,9 @@ img{display:block;max-width:100%}
 /* Animations */
 .animate-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .animate-in.visible{opacity:1;transform:translateY(0)}
+
+/* Protect images from download */
+.no-download{pointer-events:none;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
 </style>
 </head>
 <body>
@@ -179,7 +182,7 @@ img{display:block;max-width:100%}
   <section class="hero floral-top">
     <div class="hero-photo-wrap">
       <div class="hero-photo-inner">
-        <img src="assets/hero-couple.jpeg" alt="Shivanagouda & Akshata" width="800" height="1200" loading="eager" decoding="async">
+        <img src="assets/hero-couple.jpeg" alt="Shivanagouda & Akshata" width="800" height="1200" loading="eager" decoding="async" class="no-download">
       </div>
     </div>
     <div class="names animate-in">
@@ -209,7 +212,7 @@ img{display:block;max-width:100%}
     <!-- Photo collage -->
     <div class="photo-collage" style="margin-top:32px">
       <img src="assets/tali.jpg" alt="Muhurtha image" width="220" height="160" class="animate-in" loading="lazy" decoding="async">
-      <img src="assets/engagement.jpg" alt="engaged couple" width="220" height="160" class="animate-in" loading="lazy" decoding="async">
+      <img src="assets/engagement.jpg" alt="engaged couple" width="220" height="160" class="animate-in no-download" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -329,6 +332,22 @@ var observer=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible')}})
 },{threshold:0.15});
 document.querySelectorAll('.animate-in').forEach(function(el){observer.observe(el)});
+
+// Prevent download and right-click on protected images
+document.querySelectorAll('.no-download').forEach(function(img){
+  img.addEventListener('contextmenu',function(e){e.preventDefault();return false});
+  img.addEventListener('dragstart',function(e){e.preventDefault();return false});
+  img.addEventListener('mousedown',function(e){if(e.button===2){e.preventDefault();return false}});
+});
+
+// Disable right-click context menu for the entire page
+document.addEventListener('contextmenu',function(e){
+  var target=e.target;
+  if(target.classList.contains('no-download')){
+    e.preventDefault();
+    return false;
+  }
+});
 </script>
 </body>
 </html>
