@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivanagouda & Akshata — Wedding Invitation</title>
+<meta name="description" content="You are cordially invited to the wedding of Shivanagouda & Akshata — 28-30 April 2026, Bailhongal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f3ee;--bg-warm:#f0ebe3;--bg-card:#faf8f4;
+  --fg:#3a3a3a;--fg-soft:#5c5c5c;--fg-muted:#8a8a8a;
+  --sage:#5a7a5a;--sage-light:#7a9e7a;--sage-dark:#3d5a3d;
+  --pink:#d4a0a0;--pink-light:#e8c4c4;
+  --cream:#f5efe6;--cream-dark:#e8dfd3;
+  --border:rgba(90,122,90,.2);--border-strong:rgba(90,122,90,.35);
+  --font-display:'Great Vibes',cursive;--font-body:'Cormorant Garamond',serif;--font-sans:'Jost',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);-webkit-font-smoothing:antialiased;line-height:1.7}
+.page{max-width:480px;margin:0 auto;overflow:hidden;position:relative;background:var(--bg)}
+img{display:block;max-width:100%}
+
+/* HERO */
+.hero{display:flex;flex-direction:column;align-items:center;background:var(--cream);position:relative;padding:0 0 40px}
+.hero-photo-wrap{width:100%;padding:20px 20px 0;position:relative}
+.hero-photo-inner{overflow:hidden;border-radius:12px 12px 50% 50%/12px 12px 20% 20%;position:relative}
+.hero-photo-inner img{width:100%;height:400px;object-fit:cover}
+.hero-photo-inner::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--cream),transparent)}
+
+.names{text-align:center;margin-top:20px;padding:0 16px}
+.names h1{font-family:var(--font-display);font-size:2.6rem;font-weight:400;color:var(--sage-dark);line-height:1.2}
+.names .amp{color:var(--sage);font-family:var(--font-display);font-size:2rem;margin:0 6px}
+
+.date-display{text-align:center;margin-top:12px}
+.date-display p{font-family:var(--font-body);font-size:1.4rem;font-weight:500;color:var(--fg);letter-spacing:.08em}
+
+.divider{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--sage-light),transparent);margin:20px auto}
+
+.quote-block{text-align:center;padding:0 32px;max-width:380px;margin:0 auto}
+.quote-block p{font-family:var(--font-body);font-size:1rem;color:var(--fg-soft);line-height:1.8;font-weight:400}
+
+/* Calendar */
+.calendar-section{background:var(--cream);padding:8px 20px 40px;text-align:center}
+.calendar-title{font-family:var(--font-display);font-size:2.2rem;color:var(--sage-dark);margin-bottom:16px}
+.calendar-grid{display:inline-grid;grid-template-columns:repeat(7,1fr);gap:4px 8px;font-family:var(--font-sans);font-size:.85rem;color:var(--fg-soft)}
+.calendar-grid .day-name{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--fg-muted);font-weight:500;padding-bottom:4px}
+.calendar-grid .day{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.calendar-grid .day.highlight{background:var(--sage);color:#fff;font-weight:500}
+.calendar-grid .day.range{background:rgba(90,122,90,.12);color:var(--sage-dark)}
+
+/* Photo collage */
+.photo-collage{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px 40px;background:var(--cream)}
+.photo-collage img{width:100%;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.08);transform:rotate(-2deg)}
+.photo-collage img:nth-child(2){transform:rotate(2deg)}
+
+/* Countdown */
+.countdown-section{background:var(--bg);padding:36px 20px;text-align:center}
+.countdown{display:flex;gap:14px;justify-content:center}
+.cd-unit{display:flex;flex-direction:column;align-items:center}
+.cd-box{width:60px;height:60px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.cd-box span{font-family:var(--font-body);font-size:1.5rem;font-weight:600;color:var(--sage-dark)}
+.cd-label{font-family:var(--font-sans);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--fg-muted);margin-top:6px;font-weight:400}
+
+/* TIMELINE — KEPT AS-IS */
+.timeline-section{padding:48px 16px;background:var(--bg-warm)}
+.timeline-section h2{font-family:var(--font-display);font-size:2.4rem;text-align:center;margin-bottom:12px;color:var(--sage-dark);font-weight:400}
+.timeline-section .section-quote{font-family:var(--font-body);font-size:.9rem;color:var(--fg-muted);text-align:center;font-style:italic;max-width:280px;margin:0 auto 44px;line-height:1.6}
+.day-header{text-align:center;margin-bottom:28px}
+.day-badge{display:inline-block;background:var(--sage);color:#fff;font-family:var(--font-sans);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.18em;padding:8px 20px;border-radius:24px}
+.day-block{max-width:400px;margin:0 auto 52px;position:relative}
+.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--sage-light),transparent);transform:translateX(-50%)}
+.tl-item{position:relative;display:flex;align-items:center;margin-bottom:44px}
+.tl-item:last-child{margin-bottom:0}
+.tl-item.left{flex-direction:row}
+.tl-item.right{flex-direction:row-reverse}
+.tl-text{width:41.66%;padding:0 16px}
+.tl-item.left .tl-text{text-align:right}
+.tl-item.right .tl-text{text-align:left}
+.tl-time{font-family:var(--font-sans);font-size:11px;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.1em;font-weight:400}
+.tl-title{font-family:var(--font-body);font-size:1rem;margin-top:4px;color:var(--fg);letter-spacing:.04em;font-weight:600}
+.tl-dot-wrap{width:16.66%;display:flex;justify-content:center;position:relative;z-index:2}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:var(--sage);border:2px solid var(--bg-warm);box-shadow:0 0 8px rgba(90,122,90,.3)}
+.tl-icon-wrap{width:41.66%;display:flex;padding:0 16px}
+.tl-item.left .tl-icon-wrap{justify-content:flex-start}
+.tl-item.right .tl-icon-wrap{justify-content:flex-end}
+.tl-icon-circle{width:56px;height:56px;border-radius:50%;background:var(--bg-card);display:flex;align-items:center;justify-content:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.tl-icon-circle img{width:32px;height:32px;object-fit:contain;opacity:.7;filter:sepia(1) hue-rotate(70deg) saturate(.5) brightness(.6)}
+.tl-icon-circle img.png-icon{width:40px;height:40px}
+
+/* VENUE */
+.venue-section{background:var(--cream);padding:40px 20px 48px}
+.venue-section h2{font-family:var(--font-display);font-size:2.4rem;text-align:center;color:var(--sage-dark);margin-bottom:24px;font-weight:400}
+.venue-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+.venue-photos img{width:100%;height:150px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.venue-photos img:first-child{transform:rotate(-1.5deg)}
+.venue-photos img:last-child{transform:rotate(1.5deg)}
+.venue-details{text-align:center}
+.venue-icon{width:48px;height:48px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.venue-icon i{color:#fff;font-size:1.1rem}
+.venue-details p{font-family:var(--font-body);font-size:1rem;color:var(--fg-soft);line-height:1.6}
+.venue-details .venue-name{font-weight:600;color:var(--fg);font-size:1.05rem}
+.map-btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--sage);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;padding:11px 26px;border-radius:28px;text-decoration:none;transition:all .3s ease;box-shadow:0 2px 8px rgba(90,122,90,.2)}
+.map-btn:hover{background:var(--sage-dark);box-shadow:0 4px 14px rgba(90,122,90,.3)}
+
+/* Footer */
+.footer-section{text-align:center;padding:36px 28px 20px;background:var(--bg)}
+.footer-section .closing{font-family:var(--font-display);font-size:2rem;color:var(--sage-dark)}
+.footer-section .closing-sub{font-family:var(--font-body);font-size:.95rem;color:var(--fg-muted);margin-top:8px;line-height:1.7}
+
+/* Floral decoration hints via subtle bg shapes */
+.floral-top,.floral-bottom{position:relative;overflow:hidden}
+.floral-top::before{position:absolute;top:10px;right:16px;font-size:2rem;opacity:.3}
+.floral-bottom::after{position:absolute;bottom:10px;left:16px;font-size:2rem;opacity:.3}
+
+/* Animations */
+.animate-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.animate-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero floral-top">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-inner">
+        <img src="assets/hero-couple.jpeg" alt="Shivanagouda & Akshata" width="800" height="1200">
+      </div>
+    </div>
+    <div class="names animate-in">
+      <h1>Shivanagouda <span class="amp">&</span> Akshata</h1>
+    </div>
+    <div class="date-display animate-in">
+      <p>28 – 30 April 2026</p>
+    </div>
+    <div class="divider"></div>
+    <div class="quote-block animate-in">
+      <p>With the blessings of our families, we joyfully invite you to share one of the most important days of our lives — our wedding day.</p>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section class="calendar-section floral-bottom">
+    <div class="calendar-title animate-in">April</div>
+    <div class="calendar-grid animate-in">
+      <span class="day-name">Mo</span><span class="day-name">Tu</span><span class="day-name">We</span><span class="day-name">Th</span><span class="day-name">Fr</span><span class="day-name">Sa</span><span class="day-name">Su</span>
+      <span class="day"></span><span class="day"></span><span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span>
+      <span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span>
+      <span class="day">13</span><span class="day">14</span><span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span>
+      <span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span>
+      <span class="day">27</span><span class="day range">28</span><span class="day range">29</span><span class="day highlight">30</span><span class="day"></span><span class="day"></span><span class="day"></span>
+    </div>
+
+    <!-- Photo collage -->
+    <div class="photo-collage" style="margin-top:32px">
+      <img src="assets/tali.jpg" alt="Venue decor" class="animate-in" loading="lazy">
+      <img src="assets/engagement.jpg" alt="Couple" class="animate-in" loading="lazy">
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><div class="cd-box"><span id="cd-days">0</span></div><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><div class="cd-box"><span id="cd-hours">0</span></div><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><div class="cd-box"><span id="cd-mins">0</span></div><span class="cd-label">Mins</span></div>
+      <div class="cd-unit"><div class="cd-box"><span id="cd-secs">0</span></div><span class="cd-label">Secs</span></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE — STRUCTURE PRESERVED -->
+  <section class="timeline-section">
+    <h2 class="animate-in">Plan of the Day</h2>
+    <p class="section-quote animate-in">"Where there is love, there is life." — Mahatma Gandhi</p>
+
+    <!-- Day 1 -->
+    <div class="day-header animate-in"><span class="day-badge">Day 1 — 28th April</span></div>
+    <div class="day-block">
+      <div class="timeline-line"></div>
+      <div class="tl-item left animate-in">
+        <div class="tl-text"><p class="tl-time">Morning</p><p class="tl-title">Devkarya</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/devakarya.svg" alt="Devkarya" loading="lazy"></div></div>
+      </div>
+      <div class="tl-item right animate-in">
+        <div class="tl-text"><p class="tl-time">Afternoon</p><p class="tl-title">Haldi</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/haldi.svg" alt="Haldi" loading="lazy"></div></div>
+      </div>
+      <div class="tl-item left animate-in">
+        <div class="tl-text"><p class="tl-time">Evening</p><p class="tl-title">Bale Shastra</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/bale_shastra.svg" alt="Bale Shastra" loading="lazy"></div></div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-header animate-in"><span class="day-badge">Day 2 — 29th April</span></div>
+    <div class="day-block">
+      <div class="timeline-line"></div>
+      <div class="tl-item left animate-in">
+        <div class="tl-text"><p class="tl-time">Evening</p><p class="tl-title">Couple Meetup</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/couple_meetup.svg" alt="Couple Meetup" loading="lazy"></div></div>
+      </div>
+      <div class="tl-item right animate-in">
+        <div class="tl-text"><p class="tl-time">Evening</p><p class="tl-title">Sangeet</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/sangeet.svg" alt="Sangeet" loading="lazy"></div></div>
+      </div>
+      <div class="tl-item left animate-in">
+        <div class="tl-text"><p class="tl-time">Night</p><p class="tl-title">Ritual</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/bastagi.svg" alt="Ritual" class="png-icon" loading="lazy"></div></div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-header animate-in"><span class="day-badge">Day 3 — 30th April</span></div>
+    <div class="day-block">
+      <div class="timeline-line"></div>
+      <div class="tl-item left animate-in">
+        <div class="tl-text"><p class="tl-time">Morning</p><p class="tl-title">Muhurtha</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/muhurtha.png" alt="Muhurtha" loading="lazy"></div></div>
+      </div>
+      <div class="tl-item right animate-in">
+        <div class="tl-text"><p class="tl-time">Evening</p><p class="tl-title">Reception</p></div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-icon-wrap"><div class="tl-icon-circle"><img src="assets/reception.svg" alt="Reception" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE / LOCATION -->
+  <section class="venue-section floral-top floral-bottom">
+    <h2 class="animate-in">Location</h2>
+    <div class="venue-photos animate-in">
+      <img src="assets/wedding-ritual.jpg" alt="Venue exterior" loading="lazy">
+      <img src="assets/stage-decoration.jpg" alt="Venue decor" loading="lazy">
+    </div>
+    <div class="venue-details animate-in">
+      <div class="venue-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <p>The reception and banquet will take place at:</p>
+      <p class="venue-name">Veerabhadreswara Kalyana Mantapa</p>
+      <p style="color:var(--fg-muted);font-family:var(--font-sans);font-size:.85rem;margin-top:2px">Bailhongal, Karnataka, India</p>
+      <a href="https://share.google/SFt06Kzgvk79sq9C4" target="_blank" rel="noopener noreferrer" class="map-btn"><i class="fas fa-map-marker-alt"></i> Open in Maps</a>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="footer-section">
+    <p class="closing animate-in">We await you!</p>
+    <p class="closing-sub animate-in">Thank you from the bottom of our hearts for being part of our special day.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  var target=new Date("2026-04-30T12:25:00+05:30").getTime();
+  var d=document.getElementById("cd-days"),h=document.getElementById("cd-hours"),m=document.getElementById("cd-mins"),s=document.getElementById("cd-secs");
+  function update(){
+    var diff=target-Date.now();
+    if(diff<=0){d.textContent=h.textContent=m.textContent=s.textContent="0";return}
+    d.textContent=Math.floor(diff/864e5);
+    h.textContent=Math.floor((diff/36e5)%24);
+    m.textContent=Math.floor((diff/6e4)%60);
+    s.textContent=Math.floor((diff/1e3)%60);
+  }
+  update();setInterval(update,1000);
+})();
+
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible')}})
+},{threshold:0.15});
+document.querySelectorAll('.animate-in').forEach(function(el){observer.observe(el)});
+</script>
+</body>
+</html>
